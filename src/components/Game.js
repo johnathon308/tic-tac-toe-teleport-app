@@ -54,7 +54,7 @@ export default class Game extends Component {
     jumpTo(step) {
         this.setState({
             stepNumber: step,
-            isXNext: (step % 2) == 0
+            isXNext: (step % 2) === 0
         })
     }
 
