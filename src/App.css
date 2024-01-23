@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* body {
+  font-family: "Century Gothic", Futura, sans-serif;
+  margin: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background: url('../public/background-ttt.jpg') center 100%/cover no-repeat;
 }
 
-.App-link {
-  color: #61dafb;
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
-@keyframes App-logo-spin {
+.status {
+  margin-bottom: 30px;
+  font-size: 34px;
+  color: #333;
+}
+
+.square {
+  background: #8e15cf;
+  border: 2px solid #4b0082;
+  color: #fff;
+  float: left;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 100px;
+  height: 100px;
+  margin-right: -2px;
+  margin-top: -2px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #2e7d32;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 800px;
+}
+
+.game-info {
+  margin-left: 80px;
+  font-size: 28px;
+  color: #555;
+}
+
+.popup {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.popup h2 {
+  color: #333;
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+.popup {
+  animation: fadeIn 0.5s ease-in-out;
+} */
+
+
+body {
+  font-family: "Century Gothic", Futura, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('../public/background-ttt.jpg') center 100%/cover no-repeat;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 2vh;
+  font-size: 3vw;
+  color: #333;
+}
+
+.square {
+  background: #8e15cf;
+  border: 2px solid #4b0082;
+  color: #fff;
+  float: left;
+  font-size: 6vw;
+  font-weight: bold;
+  line-height: 8vh;
+  height: 8vh;
+  margin-right: -2px;
+  margin-top: -2px;
+  padding: 0;
+  text-align: center;
+  width: 8vh;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #2e7d32;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30vw; /* Use viewport width for margin */
+}
+
+.game-info {
+  margin-left: 5vw; /* Use viewport width for margin */
+  font-size: 2vw; /* Use viewport width for font size */
+  color: #555;
+}
+
+.popup {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2vw;
+  border-radius: 8px;
+}
+
+.popup h2 {
+  color: #333;
+}
+
+.popup button {
+  margin-top: 1vh;
+  padding: 1vh 2vw;
+  font-size: 1.6vw;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.popup {
+  animation: fadeIn 0.5s ease-in-out;
 }
