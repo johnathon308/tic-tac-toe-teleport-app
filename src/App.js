@@ -25,6 +25,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <div className="ttt-title">Tic Tac Toe</div>
       <Game onGameEnd={handleGameEnd} />
       {isPopupOpen && <Popup winner={winner} onClose={handleClosePopup} />}
     </div>
